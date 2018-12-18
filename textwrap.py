@@ -1,14 +1,20 @@
 
-import textwrap as tw
 
-def wrapp(string,max_width):
+
+def wrap(string,max_width):
     #function wrap return a list
-    NewString=tw.wrap()
+    newlist=[]
+    while string!='':
+        if len(string)<max_width:
+            newlist.append(string)
+            break
+        newlist.append(string[:max_width])
+        string=string[max_width:]
     
-    return ''.join(map(str(x)+'\n',NewString))
+    return ''.join((str(x)+'\n') for x in newlist)
 
 if __name__ == "__main__":
     strings =input()
     max_width=int(input())
-    result=wrapp(strings,max_width)
+    result=wrap(strings,max_width)
     print(result)
