@@ -15,6 +15,14 @@ if __name__ == "__main__":
     BeLine='WELCOME'
     while len(BeLine)<m:
         BeLine='-'+BeLine+'-'
-        
-    print(BeLine)
+    print(BeLine)    
+
+    for i in range((n-1)//2,0,-1):
+        curList=baseIcon
+        for _ in range(i,1,-1):
+            curList=baseIcon+curList+baseIcon
+        while len(curList)<m:
+            curList='-'+curList+'-'
+        print(curList)
+   
         
