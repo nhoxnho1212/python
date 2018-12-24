@@ -1,6 +1,3 @@
-
-
-
 def wrap(string,max_width):
     #function wrap return a list
     newlist=[]
